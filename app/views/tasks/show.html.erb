@@ -1,0 +1,14 @@
+<h2><%= @task.title %></h2>
+<p> Completed? <%= @task.completed ? "Yes" : "No" %></p>
+<p>Details:<br><%= @task.details %></p>
+
+<p>links:</p>
+<p><%= link_to "Home", tasks_path %> </p>
+<p><%= link_to "Edit", edit_task_path %> </p>
+<p><%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  </p>
+
+make these into cards later
